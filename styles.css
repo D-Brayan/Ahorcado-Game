@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(img/fondo2.jpg);
+  background-size: 100% 100vh;
+  color: #fff;
+  font-family: 'SF Pixelate', sans-serif;
+  overflow: hidden;
+}
+
+
+h1 {
+  font-size: 50px;
+  margin: 20px;
+  user-select: none;
+  animation: animate2 5s linear infinite;
+}
+
+.body {  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10em;
+}
+
+
+.hidden {
+  color:transparent;
+}
+
+#usedLetters {
+  user-select: none;
+  margin-top: 10px;
+}
+
+#icono {
+  width: 200px;
+  position: relative;
+  bottom: 38px;
+  border: 5px solid #fff;
+}
+
+#wordContainer {
+  margin: 20px;
+}
+
+.letter {
+  margin: 0 7px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+}
+
+.letter::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  min-width: 12px;
+  max-width: 13px;
+}
+
+
+#startButton {
+  /* appearance: none; */
+  font-family: 'SF Pixelate', sans-serif;
+  border: none;
+  width: 300px;
+  padding: 10px;
+  background: #022902;
+  color: #fff;
+  font-weight: 600px;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .2s;
+  position: relative;
+}
+
+.s {
+  position: absolute;
+  display: block;
+  background: #02d102;
+  box-shadow: 0 0 5px #02d102;
+} 
+
+#buttomGame:hover {
+  box-shadow: 0 0 25px red;
+}
+
+/* ANIMACION */
+
+.box div {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border: 10px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+}
+
+.box div:nth-child(1) {
+  top: 128%;
+  left: 42%;
+  animation: animate 5s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(2) {
+  top: 145%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(3) {
+  top: 130%;
+  left: 6%;
+  animation: animate 4s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(4) {
+  top: 145%;
+  left: 70%;
+  animation: animate 5s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 4s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(6) {
+  top: 105%;
+  left: 68%;
+  animation: animate 3s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(7) {
+  top: 130%;
+  left: 80%;
+  animation: animate 8s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(8) {
+  top: 120%;
+  left: 25%;
+  animation: animate 5s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(9) {
+  top: 100%;
+  left: 25%;
+  animation: animate 2s linear infinite;
+  /* border-radius: 30%; */
+}
+
+.box div:nth-child(10) {
+  top: 80%;
+  left: 92%;
+  animation: animate 5s linear infinite;
+  
+  /* border-radius: 30%; */
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.5) translateY(-400px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ANIMACION DEL TITULO */
+
+@keyframes animate2 {
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #fff;
+    text-shadow: 0 0 10px #6d0fd1, 0 0 20px #6d0fd1, 0 0 40px #6d0fd1, 0 0 80px #6d0fd1, 0 0 160px #6d0fd1;
+  }
+}
+
+/* ANIMACION DEL BOTON START */
+
+#startButton:hover {
+  /* background: #d95d39; */
+  box-shadow: 0 0 25px #02d102;
+  color: #02d102;
+  text-shadow: 0 0 5px #02d102;
+  transition-delay: 1ms;
+  /* animation-fill-mode: forwards; */
+}
+
+.s:nth-child(2) {
+  left: 0;
+  top: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+
+#startButton:hover .s:nth-child(2) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+
+.s:nth-child(3) {
+  right: 0;
+  top: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .2s;
+}
+
+#startButton:hover .s:nth-child(3) {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.s:nth-child(4) {
+  right: 0;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform .2s;
+  transition-delay: .2s;
+}
+
+#startButton:hover .s:nth-child(4) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.s:nth-child(5) {
+  left: 0;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform .2s;
+  transition-delay: .2s;
+}
+
+#startButton:hover .s:nth-child(5) {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.s:nth-child(6) {
+  left: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .2s;
+  transition-delay: .25s;
+
+}
+
+#startButton:hover .s:nth-child(6) {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.s:nth-child(7) {
+  right: 0;
+  bottom: 0;
+  width: 50.5%;
+  height: 1.5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform .2s;
+  transition-delay: .25s;
+}
+
+#startButton:hover .s:nth-child(7) {
+  transform: scaleX(1);
+  transform-origin: right;
+}
